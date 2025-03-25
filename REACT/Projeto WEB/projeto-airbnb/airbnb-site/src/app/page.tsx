@@ -7,7 +7,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
+  
     <div>
+      <h1>Teste</h1>
       <header className="container mx-auto px-5">
         <BarraSuperior />
         <BarraPesquisa />
