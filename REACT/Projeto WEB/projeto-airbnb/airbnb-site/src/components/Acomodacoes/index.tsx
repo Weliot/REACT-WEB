@@ -11,7 +11,7 @@ interface AcomodacaoProps {
 }
 
 const Acomodacao = ({
-    children, local, anfitriao, data, preco, avaliacao, preferidoHospedes
+    children, local, anfitriao, data, preco, avaliacao, preferidoHospedes,
 }: AcomodacaoProps) => {
     return(
         <figure className="relative">
