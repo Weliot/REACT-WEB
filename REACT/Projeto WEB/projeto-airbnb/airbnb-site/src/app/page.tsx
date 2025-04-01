@@ -1,4 +1,5 @@
 import Logo from "@/components/Logo/Index";
+import { fetchData } from "@/utils/api";
 import Acomodacoes from "@/widget/Acomodacoes";
 import BarraPesquisa from "@/widget/BarraPesquisa";
 import BarraSuperior from "@/widget/BarraSuperior";
@@ -7,7 +8,10 @@ import Rodape from "@/widget/Rodape";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+
+  const dados = await fetchData()
+
   return (
   
     <div>
@@ -20,8 +24,8 @@ export default function Home() {
 
       <main className="container mx-auto">
 
-        <NavegacaoAbasHorizontal />
-        <Acomodacoes />
+        <NavegacaoAbasHorizontal icons={dados.icons} />
+        <Acomodacoes accommodation={dados.accommodation} />
 
       </main>
 
